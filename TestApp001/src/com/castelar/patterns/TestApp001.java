@@ -20,7 +20,7 @@ public class TestApp001 {
         System.out.print("Just to verify app.. updated...");
         
         
-        System.out.print("A new line added...");
+        System.out.print("A new line added, accepted line ...");
         
     }
     
