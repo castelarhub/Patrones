@@ -4,9 +4,9 @@ package com.castelar.patterns.singleton;
  *
  * @author operador
  */
-public class SingleObject {
+public final class SingleObject {
     
-    private static final SingleObject instancia = new SingleObject();
+    private static SingleObject instancia = null;
     
     /**
      * Constructor privado.
@@ -20,8 +20,12 @@ public class SingleObject {
      * @return SingleObject
      */
     public static SingleObject getInstancia(){
+        
+        if(instancia==null){            
+            instancia = new SingleObject();
+        }        
         System.out.println("Recuperando la instancia");
-        return instancia;        
+        return instancia;
     }
     
     /**

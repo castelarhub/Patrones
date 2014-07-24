@@ -19,18 +19,26 @@ public class SingletonPatternApp002 {
      */
     public static void main(String[] args) throws InterruptedException {
         String mensaje = null;
+        
+        SingleObject singleObject1 = null;
+        SingleObject singleObject2 = null;
+        SingleObject singleObject3 = null;
+        
         //Primer llamada
-        mensaje = SingleObject.getInstancia().getMessage();        
+        singleObject1 = SingleObject.getInstancia();
+        mensaje = singleObject1.getMessage();
         System.out.println(mensaje);
         Thread.sleep(1000);
         
         //Segunda llamada
-        mensaje = SingleObject.getInstancia().getMessage();
+        singleObject2 = SingleObject.getInstancia();
+        mensaje = singleObject2.getMessage();
         System.out.println(mensaje);
         Thread.sleep(1000);
         
         //Tercer llamada
-        mensaje = SingleObject.getInstancia().getMessage();
+        singleObject2 = SingleObject.getInstancia();
+        mensaje = singleObject2.getMessage();
         System.out.println(mensaje);
         
     }
