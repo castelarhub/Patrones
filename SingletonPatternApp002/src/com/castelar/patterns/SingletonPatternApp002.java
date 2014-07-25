@@ -28,17 +28,15 @@ public class SingletonPatternApp002 {
         singleObject1 = SingleObject.getInstancia();
         mensaje = singleObject1.getMessage();
         System.out.println(mensaje);
-        Thread.sleep(1000);
         
         //Segunda llamada
         singleObject2 = SingleObject.getInstancia();
         mensaje = singleObject2.getMessage();
         System.out.println(mensaje);
-        Thread.sleep(1000);
         
         //Tercer llamada
-        singleObject2 = SingleObject.getInstancia();
-        mensaje = singleObject2.getMessage();
+        singleObject3 = SingleObject.getInstancia();
+        mensaje = singleObject3.getMessage();
         System.out.println(mensaje);
         
     }

@@ -7,6 +7,7 @@ package com.castelar.patterns.singleton;
 public final class SingleObject {
     
     private static SingleObject instancia = null;
+    private static int contador=0;
     
     /**
      * Constructor privado.
@@ -21,9 +22,9 @@ public final class SingleObject {
      */
     public static SingleObject getInstancia(){
         
-        if(instancia==null){            
+        if(instancia==null){
             instancia = new SingleObject();
-        }        
+        }
         System.out.println("Recuperando la instancia");
         return instancia;
     }
@@ -33,7 +34,8 @@ public final class SingleObject {
      * @return 
      */
     public String getMessage(){
-        return "La hora es:"+ new java.util.Date();
+        contador++;
+        return "La hora es:"+ new java.util.Date() + ", el contador va en:"+contador;
     }
     
 }
