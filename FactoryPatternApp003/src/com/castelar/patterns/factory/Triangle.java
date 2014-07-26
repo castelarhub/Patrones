@@ -10,11 +10,11 @@ package com.castelar.patterns.factory;
  *
  * @author operador
  */
-public interface Shape {
-    public final String CIRCLE="CIRCLE";
-    public final String SQUARE="SQUARE";
-    public final String RECTANGLE="RECTANGLE";
-    public final String TRIANGLE="TRIANGLE";
-    public void draw();
+public class Triangle implements Shape {
+
+    @Override
+    public void draw() {
+        System.out.println("Dobujando un triangulo");
+    }
     
 }
