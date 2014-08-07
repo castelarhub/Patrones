@@ -3,7 +3,7 @@
  */
 package com.castelar.patterns.client;
 
-import com.castelar.patterns.factory.FactoryShape;
+import com.castelar.patterns.factory.ShapeFactory;
 import com.castelar.patterns.factory.Shape;
 
 /**
@@ -22,10 +22,10 @@ public class FactoryPatternDemo {
             Shape shapeObjectCircle = null;
             Shape shapeObjectSquare = null;
             
-            shapeObjectCircle = FactoryShape.getShape(Shape.CIRCLE);
+            shapeObjectCircle = ShapeFactory.getShape(Shape.CIRCLE);
             shapeObjectCircle.draw();
                         
-            shapeObjectSquare = FactoryShape.getShape(Shape.SQUARE);
+            shapeObjectSquare = ShapeFactory.getShape(Shape.SQUARE);
             shapeObjectSquare.draw();            
             
 

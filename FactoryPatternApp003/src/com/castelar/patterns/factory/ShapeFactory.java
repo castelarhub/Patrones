@@ -9,7 +9,7 @@ package com.castelar.patterns.factory;
  *
  * @author operador
  */
-public class FactoryShape {
+public class ShapeFactory {
 
     public static Shape getShape(String type) throws Exception {
         Shape shape = null;
